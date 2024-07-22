@@ -1,0 +1,64 @@
+[
+    {
+        "address": "1056 Fourth Line Milton ON L9T0A3",
+        "appointments": {},
+        "dob": "Wed, 26 Oct 2022 13:54:17 GMT",
+        "email": "kgurram@rye.co",
+        "full_name": "kay glizzy",
+        "health_card": "1232 1232 1232 AC",
+        "medical_notes": {
+            "asdasd": {
+                "date": "Wed, 26 Oct 2022 13:54:17 GMT",
+                "note": "asdasdasd"
+            },
+            "qweqwe": {
+                "date": "Wed, 26 Oct 2022 13:54:17 GMT",
+                "note": "qweqweqwe"
+            }
+        },
+        "patient_id": "17ae3616-0ba3-4535-91bc-345be13efc81",
+        "phone": "647 355 2352"
+    },
+    {
+        "address": "6345 Victoria Street, Toronno, California, Canada",
+        "appointments": {},
+        "dob": "Thu, 17 Nov 2022 11:03:10 GMT",
+        "email": "Misankitra@hdms.com",
+        "full_name": "Misurrr Anky",
+        "health_card": "23423324",
+        "medical_notes": {},
+        "patient_id": "20394209j2094u3234",
+        "phone": "2348230293"
+    },
+    {
+        "address": "123 sdfsdf, sdfsd, sdfsdf, fsdfs",
+        "appointments": {},
+        "dob": "Thu, 17 Nov 2022 11:07:51 GMT",
+        "email": "AnkyMisr@ryerson.ca",
+        "full_name": "Anky Misr",
+        "health_card": "sdfsdf",
+        "medical_notes": {},
+        "patient_id": "234v892j98312",
+        "phone": "sdfsdfs"
+    },
+    {
+        "address": "1056 Fourth Line Milton ON L9T0A3",
+        "appointments": {},
+        "dob": "Wed, 26 Oct 2022 13:57:55 GMT",
+        "email": "kgurram@rye.co",
+        "full_name": "kay glizzy",
+        "health_card": "1232 1232 1232 AC",
+        "medical_notes": {
+            "asdasd": {
+                "date": "Wed, 26 Oct 2022 13:57:55 GMT",
+                "note": "asdasdasd"
+            },
+            "qweqwe": {
+                "date": "Wed, 26 Oct 2022 13:57:55 GMT",
+                "note": "qweqweqwe"
+            }
+        },
+        "patient_id": "2de768c8-fc7d-4994-98f1-6b394a9a239a",
+        "phone": "647 355 2352"
+    }
+]

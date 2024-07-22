@@ -1,0 +1,48 @@
+#  Template python-build
+
+#  This template allows you to validate your python code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: python:3.8
+
+pipelines:
+  default:
+  
+    # - parallel:
+    #   - step:
+    #       name: Test
+    #       caches:
+    #         - pip
+    #       script:
+    #         - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    #         - pip install pytest
+    #         - pytest -v tests/* --junitxml=test-reports/report.xml
+    #   - step:
+    #       name: Lint code
+    #       script:
+    #         # Enforce style consistency across Python projects https://flake8.pycqa.org/en/latest/manpage.html
+    #         - pip install flake8
+    #         - flake8 . --extend-exclude=dist,build --show-source --statistics
+      - step:
+          name: Create artifact
+          script:
+            - tar czfv application.tgz hospital_management/
+          artifacts:
+            - application.tgz
+
+      - step:
+          name: Deploy to Production
+          deployment: production
+          caches:
+            - pip
+          script:
+            - pipe: atlassian/heroku-deploy:2.0.0
+              variables:
+                HEROKU_API_KEY: '0cdb356e-b2c2-4ecb-ac1c-0c95474c2f20'
+                HEROKU_APP_NAME: 'cps-714-hospital-management'
+                ZIP_FILE: "application.tgz"
+                # ACTION: '<string>' # Optional. 'update' or 'deploy' # Default 'deploy'.
+                # ZIP_FILE: '<string>' # Optional. 'ACTION' 'deploy' specific.
+                # WAIT: '<boolean>' # Optional. 'ACTION' 'deploy' specific # Default: 'false'.
+                # CONFIG_VARS: '<json>' # Optional. 'ACTION' 'update' specific.
+                # DEBUG: '<boolean>' # Optional. # Default: 'false'.
